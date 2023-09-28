@@ -41,6 +41,7 @@ export default function Home(props) {
         setText(event.target.value)
   }
 
+  // phal pahla git upload
   const [text, setText] = useState("")
 
   const words = text.split(" ").length;
