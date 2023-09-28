@@ -1,0 +1,17 @@
+module1.mjs:
+
+    const a = "ayushi"
+    const b = "vidushi"
+    const c = "abhiyansh"
+
+    export default a;
+    export {b}
+    export {c}
+
+    // hence by default wale ko as it is export kr skte h aur jaha import krenge vaha kisi bhi name se kr skte h.
+    // but jo by default export ni ho rahe h unko {} use krke krna hoga and ese hi import krenge with the same name.
+
+module2.mjs :
+
+    import abc, {b, c} from './module1.mjs';
+    
