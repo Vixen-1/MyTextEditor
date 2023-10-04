@@ -40,6 +40,7 @@ function App() {
       <Alert alert = {alert}/>
       <Routes>
         <Route path="/" element={<Home heading="Enter the text to analyze" mode={mode} alert={alert} showAlert={showAlert} />}/>
+        <Route path="/Home" element={<Home heading="MyTextEditor - manipulate your text" mode={mode} alert={alert} showAlert={showAlert} />}/>
         <Route path="/about" element={<About mode={mode}/>} />
       </Routes>
       </BrowserRouter>
