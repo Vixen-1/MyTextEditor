@@ -39,7 +39,7 @@ function App() {
       <Alert alert = {alert}/>
       <Routes>
         <Route path="/home" element={<Home heading="Enter the text to analyze" mode={mode} alert={alert} showAlert={showAlert} />}/>
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About mode={mode}/>} />
       </Routes>
     </>
   );
