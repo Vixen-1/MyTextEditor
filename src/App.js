@@ -5,7 +5,7 @@ import About from './components/About';
 import Alert from './components/Alert';
 
 import React, { useState } from 'react';
-import {Routes, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -35,12 +35,14 @@ function App() {
 
   return (
     <>
+    <BrowserRouter>
       <Navbar mode = {mode} toggleMode = {toggleMode} />
       <Alert alert = {alert}/>
       <Routes>
-        <Route path="/home" element={<Home heading="Enter the text to analyze" mode={mode} alert={alert} showAlert={showAlert} />}/>
+        <Route path="/" element={<Home heading="Enter the text to analyze" mode={mode} alert={alert} showAlert={showAlert} />}/>
         <Route path="/about" element={<About mode={mode}/>} />
       </Routes>
+      </BrowserRouter>
     </>
   );
 }
